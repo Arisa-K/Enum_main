@@ -1,0 +1,19 @@
+  <!-- 1 -->
+<%= form_tag({controller:"users",action:"index"}, method: :get) do %>
+   <!-- 2 -->
+   <%= text_field_tag :search %>
+   <!-- 3 -->
+   <%= submit_tag '検索する'  %>
+ <!-- 4 -->
+ <% end %>
+
+<% @users.each do |user| %>
+    <h6>名前:<%= user.name %></h6>
+    <h6>学部:<%= user.department %></h6>
+    <h6>学年:<%= user.current_year %></h6>
+    
+    <%= link_to "詳細へ", user_path(user.id) %>
+    <br>
+<%= "======================" %>
+    <br>
+  <% end %>

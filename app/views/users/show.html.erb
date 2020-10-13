@@ -1,0 +1,165 @@
+<h1>Users#show</h1>
+<p>名前 : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<%= link_to '編集する', edit_user_registration_path %>
+<br>
+<% monday = Array.new(6, Array.new(3, "×") ) %>
+<% tuesday = Array.new(6, Array.new(3, "×") ) %>
+============================
+<%= monday%>
+  <% @user_seasons.each do |t|  %>
+    <% date= t.b %>
+      <% if  "月" == date %>
+        <h5>月曜日</h5>
+          <% i = t.c.to_i  %>
+            <% monday[i-1][2] = t.a %>
+            <% monday[i-1][0] = t.b %>
+            <% monday[i-1][1] = t.c %>
+            <%= mondeay[%>
+      <% elsif  "火" == date %>
+        <h5>火曜日</h5>
+          <% i = t.c.to_i  %>
+            <% tuesday[i-1][2] = t.a %>
+            <% tuesday[i-1][0] = t.b %>
+            <% tuesday[i-1][1] = t.c %>
+      <% end %>
+  <% end%>
+   
+  <br>
+==========================
+<table>
+  <tr>
+    <th>1年春</th>
+    <th>月</th>
+    <th>火</th>
+    <th>水</th>
+    <th>木</th>
+    <th>金</th>
+    <th>土</th>
+  </tr>
+  <tr>
+    <td>1限</td>
+    <td><%= monday[0][2] %></td>
+    <td><%= tuesday[0][2] %></td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+    <td>2限</td>
+    <td><%= monday[1][2] %></td>
+    <td><%= tuesday[1][2] %></td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+    <td>3限</td>
+    <td><%= monday[2][2] %></td>
+    <td><%= tuesday[2][2] %></td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>4限</td>
+  <td><%= monday[3][2] %></td>
+  <td><%= tuesday[3][2] %></td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>5限</td>
+  <td><%= monday[4][2] %></td>
+  <td><%= tuesday[4][2] %></td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>6限</td>
+  <td><%= monday[5][2] %></td>
+  <td><%= tuesday[5][2] %></td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+</table>
+
+<%= link_to '編集する', edit_user_registration_path %>
+
+<table>
+  <tr>
+    <th>1年秋</th>
+    <th>月</th>
+    <th>火</th>
+    <th>水</th>
+    <th>木</th>
+    <th>金</th>
+    <th>土</th>
+  </tr>
+  <tr>
+    <td>1限</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+    <td>2限</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+    <td>3限</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+    <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>4限</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>5限</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+  <tr>
+  <td>6限</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  <td>フォーム</td>
+  </tr>
+</table>
+
+<%= link_to '編集する', edit_user_registration_path %>
+
